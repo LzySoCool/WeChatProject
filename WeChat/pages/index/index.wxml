@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="centerView" style="background-image: url('../../images/index.jpg')">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>  
+  <view class="usermotto">
+      <button type="primary" bindtap='aaa' plain="true" style='border:none;'>查看位置</button>
+      <button type="primary" bindtap='inMap' plain="true" style='border:none;'>进入地图</button>
+  </view>
+</view>
