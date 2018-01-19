@@ -1,0 +1,28 @@
+/* pages/index/publishTask/task.wxss */
+.outmost {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nameV {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.nameImg {
+  height: 30px;
+  width: 30px;
+}
+
+.inputS {
+  height: 30px;
+  margin-left: 10%;
+}
+
+.weizhiImg {
+  height: 20px;
+  width: 20px;
+}

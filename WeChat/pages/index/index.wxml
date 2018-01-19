@@ -8,7 +8,7 @@
     </block>
   </view>  
   <view class="usermotto">
-      <button type="primary" bindtap='aaa' plain="true" style='border:none;'>查看位置</button>
+      <button type="primary" bindtap='taskPage' plain="true" style='border:none;'>发布任务</button>
       <button type="primary" bindtap='inMap' plain="true" style='border:none;'>进入地图</button>
   </view>
 </view>

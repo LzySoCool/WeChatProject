@@ -19,8 +19,8 @@
 .usermotto {
   height: 100%;
   width: 80%;
-  margin-top: 60%;
-  margin-bottom: 10%; 
+  margin-top: 65%;
+  margin-bottom: 20%; 
 }
 
 .centerView {

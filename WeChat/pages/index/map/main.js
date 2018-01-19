@@ -2,13 +2,16 @@
 
 //获取应用实例
 const app = getApp()
+var QQMapWX = require('../../../resource/qqmap-wx-jssdk.js');
 
 Page({
-
+  
   /**
    * 页面的初始数据
    */
   data: {
+    map_width: 380,
+    map_height: 380,
     latitudeInit: 0,
     longitudeInit: 0,
     circles: [
@@ -26,6 +29,9 @@ Page({
    */
   onLoad: function (options) {
     var _this = this;
+    var demo = new QQMapWX({
+      key: '848ebc0a7e39b4d36407523223bed27a' // 必填
+    });
     wx.getLocation({
       success: function (res) {
         wx.getLocation({
@@ -63,7 +69,28 @@ Page({
           },
         })
       },
-    })
+    }),
+      //set the width and height
+      // 动态设置map的宽和高
+      wx.getSystemInfo({
+        success: function (res) {
+          _this.setData({
+            map_width: res.windowWidth
+            , map_height: res.windowHeight-100
+          })
+        }
+      }),
+    demo.reverseGeocoder({
+      
+      location: {
+        latitude: _this.data.latitudeInit,
+        longitude: _this.data.longitudeInit
+      },
+      success: function (addressRes) {
+        var address = addressRes.result.formatted_addresses.recommend;
+        console.log(address)
+      }
+    });
   },
 
   /**
@@ -119,6 +146,7 @@ Page({
   getCenterLocation: function () {
     this.mapCtx.getCenterLocation({
       success: function (res) {
+        console.log(res)
         console.log(res.longitude)
         console.log(res.latitude)
       }
@@ -172,6 +200,7 @@ Page({
                   //     radius: 2
                   //   }]
                   // })
+                  console.log(res)
                   console.log(res.latitude)
                   console.log(res.longitude)
                 },
@@ -181,5 +210,49 @@ Page({
         }
       }
     })
+  }
+  //获取中间点的经纬度，并mark出来
+  , getLngLat: function () {
+    var that = this;
+    this.mapCtx = wx.createMapContext("myMap");
+    this.mapCtx.getCenterLocation({
+      success: function (res) {
+
+        that.setData({
+          longitude: res.longitude
+          , latitude: res.latitude
+          , markers: [
+            {
+              id: 0
+              , longitude: res.longitude
+              , latitude: res.latitude
+              , width: 30
+              , height: 30
+            }, {
+              id: "1",
+              latitude: 25.8183598961112,
+              longitude: 114.92085,
+              width: 10,
+              height: 10,
+            }
+          ],
+          circles: [{
+            latitude: res.latitude,
+            longitude: res.longitude,
+            color: '#FF0000DD',
+            fillColor: '#7cb5ec88',
+            radius: 300,
+            strokeWidth: 1
+          }]
+        })
+
+      }
+    })
+  }, 
+  regionchange(e) {
+    // 地图发生变化的时候，获取中间点，也就是用户选择的位置
+    if (e.type == 'end') {
+      this.getLngLat()
+    }
   }
 })

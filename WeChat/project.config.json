@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.6.6",
 	"appid": "wx2e5699e4bf3b310b",
-	"projectname": "Origin",
+	"projectname": "WeiXinProject",
 	"condition": {
 		"search": {
 			"current": -1,

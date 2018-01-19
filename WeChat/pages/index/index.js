@@ -61,18 +61,21 @@ Page({
     console.log(e.detail.encryptedData)
     console.log(e.detail.errMsg)
   },
-  aaa: function(e) {
-    wx.getLocation({
-      type: 'gcj02',
-      success: function (res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        wx.openLocation({
-          latitude: latitude,
-          longitude: longitude,
-          scale: 28
-        })
-      },
+  taskPage: function(e) {
+    // wx.getLocation({
+    //   type: 'gcj02',
+    //   success: function (res) {
+    //     var latitude = res.latitude
+    //     var longitude = res.longitude
+    //     wx.openLocation({
+    //       latitude: latitude,
+    //       longitude: longitude,
+    //       scale: 28
+    //     })
+    //   },
+    // })
+    wx.navigateTo({
+      url: './publishTask/task'
     })
   },
   

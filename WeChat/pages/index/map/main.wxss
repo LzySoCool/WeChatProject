@@ -2,7 +2,3 @@
 /* .mainTop{
   height: 80%;
 } */
-.map{
-  height: 20rem;
-  width: 100%;
-}

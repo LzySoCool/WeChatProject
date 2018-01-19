@@ -1,0 +1,21 @@
+<!--pages/index/publishTask/task.wxml-->
+<view class="outmost">
+  <view class="header">
+    <view class="nameV">
+      <image src="{{image1}}" class="nameImg"></image>
+      <input class="inputS" type="text" placeholder="请输入姓名" data-imageIndex='1' data-image='../../../images/name1.png' data-images='../../../images/name.png' bindfocus="selected" bindblur="lose"></input>
+    </view>
+     <view class="nameV">
+      <image src="{{image2}}" class="nameImg"></image>
+      <input class="inputS" type="Number" placeholder="请输入手机号" data-imageIndex='2' data-image='../../../images/phone1.png' data-images='../../../images/phone.png' bindfocus="selected" bindblur="lose"></input>
+    </view>
+    <view class="nameV">
+      <image src="{{image3}}" class="nameImg"></image>
+      <input class="inputS" type="Number" placeholder="请输入赏金" data-imageIndex='3' data-image='../../../images/money1.png' data-images='../../../images/money.png' bindfocus="selected" bindblur="lose"></input>
+    </view> 
+    <view class="nameV">
+      <image src="{{image4}}" class="nameImg"></image>
+      <input class="inputS" type="Number" placeholder="请标注位置" data-imageIndex='4' disabled="true" data-image='../../../images/address1.png' data-images='../../../images/address.png' bindfocus="selected" bindblur="lose" bindtap="selectAddr"></input>
+    </view>
+  </view>
+</view>
