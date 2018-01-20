@@ -3,7 +3,10 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/index/map/main",
+    "pages/index/map/address",
+    "pages/index/publishTask/taskList",
     "pages/index/publishTask/task"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",

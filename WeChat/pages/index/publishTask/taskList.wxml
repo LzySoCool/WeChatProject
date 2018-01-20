@@ -1,0 +1,4 @@
+<!--pages/index/publishTask/taskList.wxml-->
+<view class="touch" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+  <text>pages/index/publishTask/taskList.wxml</text>
+</view>

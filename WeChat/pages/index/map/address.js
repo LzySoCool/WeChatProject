@@ -1,45 +1,40 @@
-// pages/index/map/main.js
+// pages/index/map/address.js
 
 //获取应用实例
 const app = getApp()
 // 引入SDK核心类
 var QQMapWX = require('../../../resource/qqmap-wx-jssdk.js');
+var demo = new QQMapWX({
+  key: 'DHYBZ-2R5KX-ZPO44-TXE3Z-WPXW2-WNBOD' // 必填腾讯地图开发者秘钥
+});
 
 Page({
-  
+
   /**
    * 页面的初始数据
    */
   data: {
+    addressInit: null,
+    address: null,
     map_width: 380,
     map_height: 380,
     latitudeInit: 0,
     longitudeInit: 0,
-    circles: [
-      // latitude: 25.819596097748395,
-      // longitude: 114.91951962432861,
-      // color: "#fff",
-      // fillColor: "#000000",
-      // radius: 2
-    ],
-    markers: []
   },
-  
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var _this = this;
-    var demo = new QQMapWX({
-      key: 'DHYBZ-2R5KX-ZPO44-TXE3Z-WPXW2-WNBOD' // 必填腾讯地图开发者秘钥
-    });
+    
     wx.getLocation({
       success: function (res) {
         wx.getLocation({
           type: 'gcj02',
           success: function (res) {
-           var latitude = res.latitude
-           var longitude = res.longitude
+            var latitude = res.latitude
+            var longitude = res.longitude
             _this.setData({
               latitudeInit: latitude,
               longitudeInit: longitude,
@@ -49,42 +44,28 @@ Page({
                 longitude: res.longitude,
                 width: 10,
                 height: 10,
-              }, {
-                id: "1",
-                latitude: 25.8183598961112,
-                longitude: res.longitude,
-                width: 10,
-                height: 10,
-              }],
-              circles: [{
-                latitude: res.latitude,
-                longitude: res.longitude,
-                color: '#FF0000DD',
-                fillColor: '#7cb5ec88',
-                radius: 300,
-                strokeWidth: 1
               }]
             })
-            console.log(_this.data.latitudeInit)
-            console.log(_this.data.longitudeInit)
           },
         }),
-        demo.reverseGeocoder({
-          //2、根据坐标获取当前位置名称，显示在顶部:腾讯地图逆地址解析
-          location: {
-            latitude: res.latitude,
-            longitude: res.longitude
-          },
-          coord_type: 5,
-          success: function (addressRes) {
-            console.log(addressRes)
-            var address = addressRes.result.formatted_addresses.recommend;
-            console.log(address)
-          },
-          fail: function (e) {
-            console.log(e)
-          }
-        })
+          demo.reverseGeocoder({
+            //2、根据坐标获取当前位置名称，显示在顶部:腾讯地图逆地址解析
+            location: {
+              latitude: res.latitude,
+              longitude: res.longitude
+            },
+            coord_type: 5,
+            success: function (addressRes) {
+              var address = addressRes.result.formatted_addresses.recommend;
+              _this.setData({
+                addressInit: address,
+                address: address
+              })
+            },
+            fail: function (e) {
+              console.log(e)
+            }
+          })
       },
     }),
       //set the width and height
@@ -93,7 +74,7 @@ Page({
         success: function (res) {
           _this.setData({
             map_width: res.windowWidth
-            , map_height: res.windowHeight-100
+            , map_height: res.windowHeight - 100
           })
         }
       })
@@ -103,7 +84,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
     // 使用 wx.createMapContext 获取 map 上下文
     this.mapCtx = wx.createMapContext('myMap');
   },
@@ -149,45 +129,7 @@ Page({
   onShareAppMessage: function () {
   
   },
-  getCenterLocation: function () {
-    this.mapCtx.getCenterLocation({
-      success: function (res) {
-        console.log(res)
-        console.log(res.longitude)
-        console.log(res.latitude)
-      }
-    })
-  },
-  moveToLocation: function () {
-    this.mapCtx.moveToLocation()
-  },
-  translateMarker: function () {
-    this.mapCtx.translateMarker({
-      markerId: 0,
-      autoRotate: true,
-      duration: 1000,
-      destination: {
-        latitude: 23.10229,
-        longitude: 113.3345211,
-      },
-      animationEnd() {
-        console.log('animation end')
-      }
-    })
-  },
-  includePoints: function () {
-    this.mapCtx.includePoints({
-      padding: [10],
-      points: [{
-        latitude: 23.10229,
-        longitude: 113.3345211,
-      }, {
-        latitude: 23.00229,
-        longitude: 113.3345211,
-      }]
-    })
-  },
-  chooseLocation: function() {
+  chooseLocation: function () {
     var _this = this;
     wx.getSetting({
       success: res => {
@@ -196,7 +138,7 @@ Page({
             scope: 'scope.userLocation',
             success() {
               wx.chooseLocation({
-                success: function(res) {
+                success: function (res) {
                   // _this.setData({
                   //   circles: [{
                   //     latitude: res.latitude,
@@ -223,7 +165,6 @@ Page({
     this.mapCtx = wx.createMapContext("myMap");
     this.mapCtx.getCenterLocation({
       success: function (res) {
-
         that.setData({
           longitude: res.longitude
           , latitude: res.latitude
@@ -234,31 +175,44 @@ Page({
               , latitude: res.latitude
               , width: 30
               , height: 30
-            }, {
-              id: "1",
-              latitude: 25.8183598961112,
-              longitude: 114.92085,
-              width: 10,
-              height: 10,
             }
-          ],
-          circles: [{
+          ]
+        }),
+        demo.reverseGeocoder({
+          //2、根据坐标获取当前位置名称，显示在顶部:腾讯地图逆地址解析
+          location: {
             latitude: res.latitude,
-            longitude: res.longitude,
-            color: '#FF0000DD',
-            fillColor: '#7cb5ec88',
-            radius: 300,
-            strokeWidth: 1
-          }]
+            longitude: res.longitude
+          },
+          coord_type: 5,
+          success: function (addressRes) {
+            var address = addressRes.result.formatted_addresses.recommend;
+            if (that.data.addressInit == address){
+              address = '当前位置';
+            }
+            that.setData({
+              addressInit: address,
+              address: address
+            })
+          },
+          fail: function (e) {
+            console.log(e)
+          }
         })
-
       }
     })
-  }, 
+  },
   regionchange(e) {
     // 地图发生变化的时候，获取中间点，也就是用户选择的位置
     if (e.type == 'end') {
       this.getLngLat()
     }
+  },
+  confirm(){
+    var _this = this;
+    app.globalData.address = _this.data.address;
+    wx.navigateBack({
+      delta: 1
+    })
   }
 })
