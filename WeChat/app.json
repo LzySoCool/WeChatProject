@@ -5,6 +5,7 @@
     "pages/index/map/main",
     "pages/index/map/address",
     "pages/index/publishTask/taskList",
+    "pages/index/publishTask/taskDetails",
     "pages/index/publishTask/task"
     
   ],
