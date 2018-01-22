@@ -1,2 +1,32 @@
 <!--pages/index/publishTask/taskDetails.wxml-->
-<text>pages/index/publishTask/taskDetails.wxml</text>
+<view class="content">
+  <view class="title">
+    <text style="text-align: center;font-size: 25px;width: 100%;">{{taskDetail.title}}</text>
+  </view>
+  <view class="taskContent">
+    <view class="taskText">
+      <textarea disabled='disabled'>{{taskDetail.taskContent}}</textarea>
+    </view>
+    <view class="taskAddr" bindtap="">
+      <image src='../../../images/address1.png' style='width:20px;height:20px;'/>
+      <text style="font-size:20px;">地址:</text>
+      <text style="font-size:16px;color:red;">(点击可查看地图)</text>
+      <textarea disabled='disabled' style="text-indent:2em;height:10%;">{{taskDetail.address}}</textarea>
+    </view>
+    <view class="taskTime">
+      <label>联系方式：</label>
+      <text>{{taskDetail.phone}}</text>
+    </view>
+    <view class="taskTime">
+      <label>任务结束时间：</label>
+      <text>{{taskDetail.time}}</text>
+    </view>
+    <view class="taskTime">
+      <label>赏金：</label>
+      <text>{{taskDetail.money}}</text>
+    </view>
+  </view>
+  <view class="confr">
+    <button type="primary">领取任务</button>
+  </view>
+</view>

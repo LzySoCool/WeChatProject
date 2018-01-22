@@ -117,7 +117,7 @@ Page({
     if(e) {
       if (this.data.open) {
         this.setData({
-          translate: 'transform: translateX(10px)'
+          translate: 'transform: translateX(0px)'
         })
         this.data.open = false;
       } else {
@@ -129,7 +129,7 @@ Page({
     this.data.newmark = e.touches[0].pageX;
     if (this.data.mark < this.data.newmark) {
       if (this.data.staus == 1) {
-        if (this.data.windowWidth * 0.75 > Math.abs(this.data.newmark - this.data.startmark)) {
+        if (this.data.windowWidth * 0.3 > Math.abs(this.data.newmark - this.data.startmark)) {
           this.setData({
             translate: 'transform: translateX(' + (this.data.newmark - this.data.startmark) + 'px)'
           })
@@ -141,20 +141,21 @@ Page({
      * 手指从右向左移动
      * @newmark是指移动的最新点的x轴坐标 ， @mark是指原点x轴坐标
      */
+    if(this.data.open){
     if (this.data.mark > this.data.newmark) {
       if (this.data.staus == 1 && (this.data.newmark - this.data.startmark) > 0) {
         this.setData({
           translate: 'transform: translateX(' + (this.data.newmark - this.data.startmark) + 'px)'
         })
-      } else if (this.data.staus == 2 && this.data.startmark - this.data.newmark < this.data.windowWidth * 0.75) {
+      } else if (this.data.staus == 2 && this.data.startmark - this.data.newmark < this.data.windowWidth * 0.3) {
         this.setData({
-          translate: 'transform: translateX(' + (this.data.newmark + this.data.windowWidth * 0.75 - this.data.startmark) + 'px)'
+          translate: 'transform: translateX(' + (this.data.newmark + this.data.windowWidth * 0.3 - this.data.startmark) + 'px)'
         })
       }
     }
-  }
     this.data.mark = this.data.newmark;
-
+    }
+  }
   },
   tap_end: function (e) {
     if(e){
@@ -166,14 +167,14 @@ Page({
         this.data.staus = 1;
       } else {
         this.setData({
-          translate: 'transform: translateX(' + this.data.windowWidth * 0.75 + 'px)'
+          translate: 'transform: translateX(' + this.data.windowWidth * 0.3 + 'px)'
         })
         this.data.staus = 2;
       }
     } else {
         if (Math.abs(this.data.newmark - this.data.startmark) < (this.data.windowWidth * 0.2) && this.data.startmark != this.data.newmark) {
         this.setData({
-          translate: 'transform: translateX(' + this.data.windowWidth * 0.75 + 'px)'
+          translate: 'transform: translateX(' + this.data.windowWidth * 0.3 + 'px)'
         })
         this.data.staus = 2;
       } else {

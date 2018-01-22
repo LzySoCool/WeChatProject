@@ -15,6 +15,7 @@ Page({
     map_height: 380,
     latitudeInit: 0,
     longitudeInit: 0,
+    radius: 500,
     circles: [
       // latitude: 25.819596097748395,
       // longitude: 114.91951962432861,
@@ -247,7 +248,7 @@ Page({
             longitude: res.longitude,
             color: '#FF0000DD',
             fillColor: '#7cb5ec88',
-            radius: 300,
+            radius: that.data.radius,
             strokeWidth: 1
           }]
         })
@@ -260,5 +261,13 @@ Page({
     if (e.type == 'end') {
       this.getLngLat()
     }
+  },
+  scopeSelect: function(e){
+    console.log(e)
+    this.setData({
+      radius: parseInt(e.detail.value)*1000
+    });
+    console.log(e.detail.value)
+    this.getLngLat();
   }
 })
