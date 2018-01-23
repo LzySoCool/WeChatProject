@@ -2,3 +2,9 @@
 /* .mainTop{
   height: 80%;
 } */
+
+.scopeV {
+  margin-top: 10px;
+  flex-direction: row;
+  display: flex;
+}

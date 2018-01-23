@@ -15,7 +15,7 @@ Page({
     map_height: 380,
     latitudeInit: 0,
     longitudeInit: 0,
-    radius: 500,
+    radius: '0.5',
     circles: [
       // latitude: 25.819596097748395,
       // longitude: 114.91951962432861,
@@ -62,7 +62,7 @@ Page({
                 longitude: res.longitude,
                 color: '#FF0000DD',
                 fillColor: '#7cb5ec88',
-                radius: 300,
+                radius: parseFloat(_this.data.radius)*1000,
                 strokeWidth: 1
               }]
             })
@@ -248,7 +248,7 @@ Page({
             longitude: res.longitude,
             color: '#FF0000DD',
             fillColor: '#7cb5ec88',
-            radius: that.data.radius,
+            radius: parseFloat(that.data.radius)*1000,
             strokeWidth: 1
           }]
         })
@@ -265,9 +265,15 @@ Page({
   scopeSelect: function(e){
     console.log(e)
     this.setData({
-      radius: parseInt(e.detail.value)*1000
+      radius: e.detail.value
     });
     console.log(e.detail.value)
     this.getLngLat();
+  },
+
+  taskList: function(){
+    wx.navigateTo({
+      url: '../publishTask/taskList'
+    })
   }
 })

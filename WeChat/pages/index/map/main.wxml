@@ -2,8 +2,11 @@
   <map id="myMap" class="map" longitude="{{longitudeInit}}" latitude="{{latitudeInit}}" circles="{{circles}}" 
   markers="{{markers}}" bindregionchange="regionchange" style="width:{{map_width}}px;height:{{map_height}}px"show-location/>
     <view class="scopeV">
-      <label>选择搜索范围：</label>
-      <input bindblur="scopeSelect"></input>km
+      <label>输入搜索范围：</label>
+      <input style="width:50px;" value='{{radius}}' bindinput="scopeSelect"></input>km
+    </view>
+    <view class="taskBtn">
+      <button type="primary" bindtap='taskList'>查看该区域任务列表</button>
     </view>
     <!-- <button type="primary" bindtap="getCenterLocation">获取位置</button> -->
     <!-- <button type="primary" bindtap="chooseLocation">选择位置</button> -->

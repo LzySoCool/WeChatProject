@@ -9,6 +9,6 @@
   </view>  
   <view class="usermotto">
       <button type="primary" bindtap='taskPage' plain="true" style='border:none;'>发布任务</button>
-      <button type="primary" bindtap='inMap' plain="true" style='border:none;'>进入地图</button>
+      <button type="primary" bindtap='inMap' plain="true" style='border:none;'>查看任务</button>
   </view>
 </view>

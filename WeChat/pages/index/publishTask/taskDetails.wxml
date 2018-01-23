@@ -7,15 +7,16 @@
     <view class="taskText">
       <textarea disabled='disabled'>{{taskDetail.taskContent}}</textarea>
     </view>
-    <view class="taskAddr" bindtap="">
+    <view class="taskAddr" bindtap="navMap">
       <image src='../../../images/address1.png' style='width:20px;height:20px;'/>
       <text style="font-size:20px;">地址:</text>
       <text style="font-size:16px;color:red;">(点击可查看地图)</text>
       <textarea disabled='disabled' style="text-indent:2em;height:10%;">{{taskDetail.address}}</textarea>
     </view>
-    <view class="taskTime">
+    <view class="taskTime" bindtap='calling' data-phone="{{taskDetail.phone}}">
       <label>联系方式：</label>
-      <text>{{taskDetail.phone}}</text>
+      <text  style="font-size: 23px;">{{taskDetail.phone}}</text>
+      <image src='../../../images/calling.png' style='width:30px;height:30px;'/>
     </view>
     <view class="taskTime">
       <label>任务结束时间：</label>
@@ -26,7 +27,10 @@
       <text>{{taskDetail.money}}</text>
     </view>
   </view>
-  <view class="confr">
-    <button type="primary">领取任务</button>
+  <view class="confr" wx:if="{{taskDetail.isSelect == 1}}">
+    <button type="primary" bindtap='getTask'>领取任务</button>
+  </view>
+  <view class="confr" wx:if="{{taskDetail.isSelect == 2}}">
+    <button type="primary" disabled="true">已领取</button>
   </view>
 </view>
