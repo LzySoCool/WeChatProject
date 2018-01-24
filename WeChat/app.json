@@ -6,7 +6,8 @@
     "pages/index/map/address",
     "pages/index/publishTask/taskList",
     "pages/index/publishTask/taskDetails",
-    "pages/index/publishTask/task"
+    "pages/index/publishTask/task",
+    "pages/index/user/user"
     
   ],
   "window":{
@@ -16,8 +17,8 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
-    "color": "#a9b7b7",
-    "selectedColor": "gary",
+    "color": "707070",
+    "selectedColor": "#292929",
     "borderStyle": "white",
     "list": [
       {
@@ -29,7 +30,7 @@
       {
         "selectedIconPath": "images/user.png",
         "iconPath": "images/user0.png",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/index/user/user",
         "text": "我的"
       }
     ]

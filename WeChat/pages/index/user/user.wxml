@@ -1,0 +1,23 @@
+<!--pages/index/user/user.wxml-->
+<view class="panal">
+  <view class="header">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <view class="userInfo">
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="content">
+    <view class="content_list">
+      <text>钱袋</text>
+    </view>
+    <view class="content_list">
+      <text>我的任务</text>
+    </view>
+    <view class="content_list">
+      <text>联系客服</text>
+    </view>
+    <view class="content_list" style="border:none;">
+      <text>常用地址</text>
+    </view>
+  </view>
+</view>
