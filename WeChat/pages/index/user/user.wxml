@@ -7,16 +7,20 @@
     </view>
   </view>
   <view class="content">
-    <view class="content_list">
+    <view class="content_list" bindtap='nav_wallet'>
+      <image src="/images/wallet.png" style="width:24px;height:24px;"></image>
       <text>钱袋</text>
     </view>
-    <view class="content_list">
+    <view class="content_list" bindtap='nav_myTask'>
+      <image src="/images/myTask.png" style="width:24px;height:24px;"></image>
       <text>我的任务</text>
     </view>
     <view class="content_list">
+      <image src="/images/service.png" style="width:24px;height:24px;"></image>
       <text>联系客服</text>
     </view>
-    <view class="content_list" style="border:none;">
+    <view class="content_list" style="border:none;" bindtap='nav_address'>
+      <image src="/images/usualAddress.png" style="width:24px;height:24px;"></image>
       <text>常用地址</text>
     </view>
   </view>

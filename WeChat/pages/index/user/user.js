@@ -92,5 +92,23 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  nav_wallet: function () {
+    wx.navigateTo({
+      url: 'wallet/money',
+    })
+  },
+
+  nav_myTask: function () {
+    wx.navigateTo({
+      url: 'myTask/myTask',
+    })
+  },
+
+  nav_address: function () {
+    wx.navigateTo({
+      url: 'usualAddress/usualAddress',
+    })
   }
 })

@@ -7,7 +7,10 @@
     "pages/index/publishTask/taskList",
     "pages/index/publishTask/taskDetails",
     "pages/index/publishTask/task",
-    "pages/index/user/user"
+    "pages/index/user/user",
+    "pages/index/user/wallet/money",
+    "pages/index/user/myTask/myTask",
+    "pages/index/user/usualAddress/usualAddress"
     
   ],
   "window":{
