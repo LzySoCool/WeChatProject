@@ -102,7 +102,7 @@ Page({
 
   nav_myTask: function () {
     wx.navigateTo({
-      url: 'myTask/myTask',
+      url: 'myTask/sendTask',
     })
   },
 

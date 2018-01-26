@@ -1,14 +1,10 @@
 <!--index.wxml-->
-<view class="centerView" style="background-image: url('../../images/index.jpg');height:{{windowHeight}}px;">
+<view class="centerView" style="background: url('/images/timg.jpg') no-repeat center center fixed;height:{{windowHeight}}px;width:{{windowWidth}}px;">
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
   </view>  
   <view class="usermotto">
-      <button type="primary" bindtap='taskPage' plain="true" style='border:none;'>发布任务</button>
-      <button type="primary" bindtap='inMap' plain="true" style='border:none;'>查看任务</button>
+      <button bindtap='taskPage' plain="true" style='border:none;color:#00E5EE'>开始发镖</button>
+      <button bindtap='inMap' plain="true" style='border:none;color:#00E5EE'>开始押镖</button>
   </view>
 </view>

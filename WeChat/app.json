@@ -9,14 +9,15 @@
     "pages/index/publishTask/task",
     "pages/index/user/user",
     "pages/index/user/wallet/money",
-    "pages/index/user/myTask/myTask",
+    "pages/index/user/myTask/sendTask",
+    "pages/index/user/myTask/receivedTask",
     "pages/index/user/usualAddress/usualAddress"
     
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "镖行天下",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {

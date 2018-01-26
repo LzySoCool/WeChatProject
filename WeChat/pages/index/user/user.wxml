@@ -9,7 +9,7 @@
   <view class="content">
     <view class="content_list" bindtap='nav_wallet'>
       <image src="/images/wallet.png" style="width:24px;height:24px;"></image>
-      <text>钱袋</text>
+      <text>我的银两</text>
     </view>
     <view class="content_list" bindtap='nav_myTask'>
       <image src="/images/myTask.png" style="width:24px;height:24px;"></image>

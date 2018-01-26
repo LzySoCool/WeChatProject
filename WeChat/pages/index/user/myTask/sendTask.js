@@ -1,4 +1,4 @@
-// pages/index/user/myTask/myTask.js
+// pages/index/user/myTask/sendTask.js
 Page({
 
   /**

@@ -28,9 +28,9 @@
     </view>
   </view>
   <view class="confr" wx:if="{{taskDetail.isSelect == 1}}">
-    <button type="primary" bindtap='getTask'>领取任务</button>
+    <button type="primary" bindtap='getTask'>接镖</button>
   </view>
   <view class="confr" wx:if="{{taskDetail.isSelect == 2}}">
-    <button type="primary" disabled="true">已领取</button>
+    <button type="primary" disabled="true">已接</button>
   </view>
 </view>
