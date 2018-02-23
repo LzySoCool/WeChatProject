@@ -2,9 +2,28 @@
 /* .mainTop{
   height: 80%;
 } */
+page {
+  font-family:STXihei;
+  font-size: 35rpx;
+}
 
 .scopeV {
   margin-top: 10px;
   flex-direction: row;
   display: flex;
+  align-items: center;
+}
+
+.taskBtnV {
+  position: fixed;
+  width: 100%;
+  bottom: 0rpx;
+}
+
+.taskBtn {
+  font-size: 35rpx;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  align-items: center;
 }

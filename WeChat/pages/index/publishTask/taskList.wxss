@@ -2,6 +2,7 @@
 page,.page {
   height: 100%;
   font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  font-size: 35rpx;
 }
 .page-bottom{
   height: 100%;
@@ -47,13 +48,23 @@ page,.page {
   height: 9%;
   flex-direction: column;
   display: flex;
-  margin-top: 2%;
   background-color: #fff;
+  border-bottom-color: #EBEBEB;
+  border-bottom-width: 1rpx;
+  border-bottom-style: solid;
+  font-size: 16px;
 }
 
 .taskJ {
   height: 5%;
   flex-direction: row;
+  padding: 5px 0 0 10px;
+} 
+
+.taskA {
+  height: 5%;
+  flex-direction: row;
+  padding: 0 0 5px 10px;
 } 
 
 .title {

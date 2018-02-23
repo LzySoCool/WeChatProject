@@ -35,7 +35,46 @@ Page({
     }, {
       title: '带饮料',
       address: '赣州技师学院小红楼'
-    }]
+      }, {
+        title: '带饮料',
+        address: '赣州技师学院小红楼'
+    }, {
+      title: '带饮料',
+      address: '赣州技师学院小红楼'
+      }, {
+        title: '带饮料',
+        address: '赣州技师学院小红楼'
+    }, {
+      title: '带饮料',
+      address: '赣州技师学院小红楼'
+      }, {
+        title: '带饮料',
+        address: '赣州技师学院小红楼'
+    }, {
+      title: '带饮料',
+      address: '赣州技师学院小红楼'
+      }, {
+        title: '带饮料',
+        address: '赣州技师学院小红楼'
+    }, {
+      title: '带饮料',
+      address: '赣州技师学院小红楼'
+      }, {
+        title: '带饮料',
+        address: '赣州技师学院小红楼'
+      }, {
+      title: '带饮料',
+      address: '赣州技师学院小红楼'
+      }, {
+        title: '带饮料',
+        address: '赣州技师学院小红楼'
+      }, {
+        title: '带饮料',
+        address: '赣州技师学院小红楼'
+      }, {
+        title: '带饮料',
+        address: '赣州技师学院小红楼'
+      }]
   },
 
   /**

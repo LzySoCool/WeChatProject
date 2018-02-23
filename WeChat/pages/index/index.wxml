@@ -1,8 +1,5 @@
 <!--index.wxml-->
-<view class="centerView" style="background: url('/images/timg.jpg') no-repeat center center fixed;height:{{windowHeight}}px;width:{{windowWidth}}px;">
-  <view class="userinfo">
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>  
+<view class="centerView" style="background: url('/images/timg.jpg') no-repeat center center fixed;height:{{windowHeight}}px;width:{{windowWidth}}px;"> 
   <view class="usermotto">
       <button bindtap='taskPage' plain="true" style='border:none;color:#00E5EE'>开始发镖</button>
       <button bindtap='inMap' plain="true" style='border:none;color:#00E5EE'>开始押镖</button>

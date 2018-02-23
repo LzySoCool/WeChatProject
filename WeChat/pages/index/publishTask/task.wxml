@@ -15,7 +15,7 @@
     </view>
     <view class="nameV">
       <image src="{{image3}}" class="nameImg"></image>
-      <view class="changeAddr" bindtap="selectAddr" >
+      <view class="changeAddr">
         <input class="inputM" type="number" placeholder="请输入任务赏金" data-imageIndex='3' data-image='../../../images/money1.png' data-images='../../../images/money.png' bindfocus="selected" bindblur="lose"></input>
         <label style="color:red;font-size:23rpx;">赏金余额：1685</label>
       </view>
@@ -23,7 +23,7 @@
     <view class="addrV">
       <image src="{{image4}}" class="nameImg"></image>
       <view class="changeAddr">
-        <input class="inputM" style="height:20px;" type="text" placeholder="请标注位置" data-imageIndex='4' data-image='../../../images/address1.png' data-images='../../../images/address.png' bindfocus="selected" bindblur="lose" value='{{address}}' bindtap="selectAddr"></input>
+        <input class="inputM" style="height:20px;" type="text" placeholder="请标注位置" data-imageIndex='4' data-image='../../../images/address1.png' data-images='../../../images/address.png' bindfocus="selected" bindblur="lose" value='{{address}}'></input>
         <label style="color:red;font-size:23rpx;" bindtap="selectAddr">如果位置不准确，点击修改</label>
         <textarea class="textareaAddr" style="border-top-style: dashed;border-width: 1px;border-color: gray;" placeholder="输入详细地址"></textarea>
       </view>
@@ -47,6 +47,9 @@
         <input class="inputS" type="text" placeholder="请选择截止时间" data-imageIndex='7' data-image='../../../images/time1.png' data-images='../../../images/time.png' bindfocus="selected" bindblur="lose" value='{{time}}'></input>
       </picker>
     </view>
-    <button class="conf" type="primary" bindtap='complate'>完成</button>
+    
   </view>
+  <view class="add_btn" bindtap='add_add'>
+    <button class="conf" type="primary" bindtap='complate'>完成</button>
+  </view>  
 </view>

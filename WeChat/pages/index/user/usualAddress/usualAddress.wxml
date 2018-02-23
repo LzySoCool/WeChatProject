@@ -1,2 +1,30 @@
 <!--pages/index/user/usualAddress/usualAddress.wxml-->
-<text>pages/index/user/usualAddress/usualAddress.wxml</text>
+<view class="pages">
+  <scroll-view scroll-y style="height:100%">
+    <view wx:for="{{addressList}}" wx:for-item="item" wx:key='add'>
+    <view class="block">
+      <view class="add_top">
+        <text class="add_name">{{item.name}}</text>
+        <text class="add_phone">{{item.phone}}</text>
+      </view>
+      <view class="add_center">
+        <text>{{item.address}}</text>
+      </view>
+      <view class="add_bott">
+        <radio data-isSct='{{item.isCheaked == 0 ? 1 : 0}}' data-id="{{index}}" bindtap='changeAdd' checked="{{item.isCheaked == 0 ? false : true}}"/>设为默认
+        <view class="add_upd">
+          <image src="/images/update.png"></image>
+          <text style="font-family:STXihei" bindtap='updateAddress'>编辑</text>
+        </view>
+        <view class="add_del" >
+          <image src="/images/delete.png"></image>
+          <text style="font-family:STXihei" bindtap='deleteAddress'>删除</text>
+        </view>
+      </view>
+    </view>
+    </view>
+  </scroll-view>
+  <view class="add_btn" bindtap='add_add'>
+    <button style="font-family:STXihei">添加收货地址</button>
+  </view>  
+</view>

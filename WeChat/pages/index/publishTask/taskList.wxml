@@ -7,19 +7,22 @@
             </view>
         </view>
     </view>
+    
     <view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page-top" style="{{translate}}">
       <view class="title">
-        <label style="text-align: center;font-size: 25px;width: 100%;">任务列表</label>
+        <label style="text-align: center;font-size: 20px;width: 100%;">任务列表</label>
       </view>
-      <view wx:for="{{taskItem}}" wx:for-item="item" wx:key="taskL">
-        <view class="taskList" bindtap="taskDetails">
-          <view class="taskJ">
-            <label>标题：</label><text>{{item.title}}</text>
-          </view>
-          <view class="taskJ">
-            <label>地址：</label><text>{{item.address}}</text>
+      <scroll-view  scroll-y style="height:100%">
+        <view wx:for="{{taskItem}}" wx:for-item="item" wx:key="taskL" class="list">
+          <view class="taskList" bindtap="taskDetails">
+            <view class="taskJ">
+              <label>标题：{{item.title}}</label>
+            </view>
+            <view class="taskA" style='margin-bottom: 0px;'>
+              <label>地址：{{item.address}}</label>
+            </view>
           </view>
         </view>
-      </view>  
+      </scroll-view> 
     </view> 
 </view>

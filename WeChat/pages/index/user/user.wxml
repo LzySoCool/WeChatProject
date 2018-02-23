@@ -9,19 +9,20 @@
   <view class="content">
     <view class="content_list" bindtap='nav_wallet'>
       <image src="/images/wallet.png" style="width:24px;height:24px;"></image>
-      <text>我的银两</text>
+      <button>我的银两</button>
     </view>
     <view class="content_list" bindtap='nav_myTask'>
       <image src="/images/myTask.png" style="width:24px;height:24px;"></image>
-      <text>我的任务</text>
+      <button>我的任务</button>
     </view>
     <view class="content_list">
       <image src="/images/service.png" style="width:24px;height:24px;"></image>
-      <text>联系客服</text>
+      <!-- <contact-button style='size:50rpx;'/> -->
+       <button open-type='contact' session-from="weapp">联系客服</button> 
     </view>
     <view class="content_list" style="border:none;" bindtap='nav_address'>
       <image src="/images/usualAddress.png" style="width:24px;height:24px;"></image>
-      <text>常用地址</text>
+      <button>常用地址</button>
     </view>
   </view>
 </view>

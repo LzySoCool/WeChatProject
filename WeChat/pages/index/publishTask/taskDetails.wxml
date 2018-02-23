@@ -1,11 +1,8 @@
 <!--pages/index/publishTask/taskDetails.wxml-->
 <view class="content">
-  <view class="title">
-    <text style="text-align: center;font-size: 25px;width: 100%;">{{taskDetail.title}}</text>
-  </view>
   <view class="taskContent">
     <view class="taskText">
-      <textarea disabled='disabled'>{{taskDetail.taskContent}}</textarea>
+      <textarea disabled='disabled' style="text-indent: 60rpx;">{{taskDetail.taskContent}}</textarea>
     </view>
     <view class="taskAddr" bindtap="navMap">
       <image src='../../../images/address1.png' style='width:20px;height:20px;'/>

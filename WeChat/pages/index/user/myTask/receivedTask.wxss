@@ -1,1 +1,7 @@
 /* pages/index/user/myTask/receivedTask.wxss */
+
+.ball {
+  box-shadow:2px 2px 10px #AAA;
+  border-radius: 20px;
+  position: absolute; 
+ }

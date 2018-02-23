@@ -1,2 +1,4 @@
 <!--pages/index/user/myTask/receivedTask.wxml-->
-<text>pages/index/user/myTask/receivedTask.wxml</text>
+<view id="id" class = "ball" bindtap = "handletap" bindtouchstart = "handletouchtart" bindtouchmove="handletouchmove" bindtouchend="handletouchend" style = "width : 100%px; height : 40px;">
+  {{text}}
+</view>
