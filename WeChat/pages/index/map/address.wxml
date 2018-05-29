@@ -2,8 +2,8 @@
 
 <view>
 <map id="myMap" class="map" longitude="{{longitudeInit}}" latitude="{{latitudeInit}}" circles="{{circles}}" 
-  markers="{{markers}}" bindregionchange="regionchange" style="width:{{map_width}}px;height:{{map_height}}px"show-location/>
-  <input value="{{address}}"></input>
+  markers="{{markers}}" bindregionchange="regionchange" style="width:{{map_width}}px;height:{{map_height}}px" show-location/>
+  <input style="font-size: 35rpx;" value="{{address}}"></input>
   <button type="primary" bindtap="confirm">确定</button>
 </view>
 

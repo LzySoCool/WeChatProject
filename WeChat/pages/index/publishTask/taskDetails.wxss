@@ -2,28 +2,22 @@
 .content {
   height: 100%;
   flex-direction: column;
+  font-family:STXihei;
+  font-size: 35rpx;
 }
-
- .title {
-  align-items: center;
-  display: flex;
-  height: 10%;
-} 
 
 .taskContent {
   height: 100%;
   align-items: center;
   flex-direction: column;
-  background-color: #A4D3EE;
   width: 750rpx;
   position: fixed;
 }
 
  .taskText {
-  border-color: gray;
-  border-width: 1rpx;
-  border-style: dashed;
+  display: flex;
   margin-left: 10%;
+  background-color: #CDBA96;
   height: 40%;
   width: 80%;
 } 

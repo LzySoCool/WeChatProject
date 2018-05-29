@@ -4,7 +4,7 @@
     <text style="text-align: center;font-size: 25px;width: 100%;">我的钱袋</text>
   </view>
   <view class="header">
-    <text>(1元=100金币)</text>
+    <text>(10RMB=1000金币)</text>
     <text>余额：</text>
     <text>{{money}}</text>
     <image src="/images/gold.png" style="width:24px;height:24px;"></image>

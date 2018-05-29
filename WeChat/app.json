@@ -11,7 +11,9 @@
     "pages/index/user/wallet/money",
     "pages/index/user/myTask/sendTask",
     "pages/index/user/myTask/receivedTask",
-    "pages/index/user/usualAddress/usualAddress"
+    "pages/index/user/usualAddress/usualAddress",
+    "pages/index/user/usualAddress/updateAddress",
+    "pages/index/user/usualAddress/addAddress"
     
   ],
   "window":{
@@ -21,7 +23,7 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
-    "color": "707070",
+    "color": "#707070",
     "selectedColor": "#292929",
     "borderStyle": "white",
     "list": [

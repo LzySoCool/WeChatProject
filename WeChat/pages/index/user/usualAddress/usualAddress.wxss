@@ -1,1 +1,98 @@
 /* pages/index/user/usualAddress/usualAddress.wxss */
+
+page {
+  background-color: #dedede;
+  font-family:STXihei;
+  font-size: 35rpx;
+}
+
+.pages {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  height: 8%;
+  background-color: #fff;
+}
+
+.block {
+  height: 20%;
+  display: flex;
+  margin-top: 10rpx;
+  background-color: #fff;
+  flex-direction: column;
+}
+
+.add_name {
+  flex: 1;
+  align-items: flex-start;
+  margin-left: 20rpx;
+}
+
+.add_phone {
+  margin-right: 20rpx;
+  align-items: flex-end;
+}
+
+.add_top {
+  display: flex;
+}
+
+.add_center {
+  text-indent: 64rpx;
+  padding: 10rpx 20rpx 10rpx;
+  border-bottom: 2rpx solid #dedede;
+}
+
+.add_btn {
+  width: 100%;
+  position: fixed; 
+  bottom: 0rpx;
+  background-color: #fff;
+}
+
+.add_btn button {
+  width: 80%;
+  border-radius: 50rpx;
+  background-color: #f5263f;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+}
+
+.add_bott {
+  padding: 10rpx 10rpx 10rpx 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.add_bott radio {
+  display: flex;
+  align-items: center;
+}
+
+.add_upd {
+  display: flex;
+  flex: 2;
+  justify-content: flex-end;
+}
+
+.add_upd image {
+  height: 24px;
+  width: 24px;
+}
+
+.add_del {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.add_del image {
+  height: 24px;
+  width: 24px;
+}

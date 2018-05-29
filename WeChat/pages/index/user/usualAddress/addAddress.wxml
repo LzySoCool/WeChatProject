@@ -1,0 +1,26 @@
+<!--pages/index/user/usualAddress/addAddress.wxml-->
+<view class='out'>
+  <view class="nameV">
+      <image src="{{image1}}" class="nameImg"></image>
+      <input class="inputS" type="text" placeholder="请输入收货人" data-imageIndex='1' data-image='/images/name1.png' data-images='/images/name.png' bindfocus="selected" bindblur="lose"></input>
+  </view>
+  <view class="nameV">
+    <image src="{{image2}}" class="nameImg"></image>
+      <input class="inputS" type="number" placeholder="请输入手机号" data-imageIndex='2' data-image='/images/phone1.png' data-images='/images/phone.png' bindfocus="selected" bindblur="lose"></input>
+  </view>
+  <view class="addrV">
+    <image src="{{image4}}" class="nameImg"></image>
+    <view class="changeAddr">
+      <label style="color:red;font-size:23rpx;" bindtap="selectAddr">如果位置不准确，点击修改</label>
+      <input class="inputM" style="height:20px;margin-left:0;" type="text" placeholder="请标注位置" data-imageIndex='4' data-image='/images/address1.png' data-images='/images/address.png' bindfocus="selected" bindblur="lose" value='{{address}}'></input>
+      <textarea class="textareaAddr" style="border-top-style: dashed;border-width: 1px;border-color: gray;" placeholder="输入详细地址"></textarea>
+    </view>
+  </view>
+  <view class="addV">
+    <text style="flex:5;">设为默认地址</text>
+    <radio style="flex:1;border-color:#000" bindtap='changeAdd' data-ischeack='{{isCheacked}}' checked="{{isCheacked}}"/>
+  </view>
+  <view class="add_btn" bindtap='add_add'>
+    <button style="font-family:STXihei">确定</button>
+  </view> 
+</view>

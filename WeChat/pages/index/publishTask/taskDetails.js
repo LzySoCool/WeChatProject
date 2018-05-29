@@ -8,9 +8,9 @@ Page({
     taskDetail: {
       id: 1,
       title: '带份饭',
-      taskContent: '某某店的某某饭，多放辣椒，不要香菜',
+      taskContent: '某某店的某某饭，多放辣椒，不要香菜啊',
       money: 45,
-      address: '中航国际大厦10楼，斯蒂芬斯蒂芬水电费胜多负少的发生的放松放松电风扇',
+      address: '长征大道1号，中航国际大厦10楼。',
       time: '2018-01-04',
       phone: '13317071014',
       latitude: 25.82751,

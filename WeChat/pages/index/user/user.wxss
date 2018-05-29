@@ -1,6 +1,8 @@
 /* pages/index/user/user.wxss */
 page {
   background-color: #DEDEDE;
+  font-family:STXihei;
+  font-size: 35rpx;
 }
 
 .panal {
@@ -50,4 +52,16 @@ page {
   border-bottom-width: 0.5px;
   border-bottom-color: #CFCFCF;
   border-bottom-style: solid;
+}
+
+.content button {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  font-family: STXihei;
+  font-size: 35rpx;
+}
+
+.content button::after{
+  border:0 none;
 }

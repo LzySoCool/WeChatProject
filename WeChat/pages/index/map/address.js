@@ -16,8 +16,8 @@ Page({
   data: {
     addressInit: null,
     address: null,
-    map_width: 380,
-    map_height: 380,
+    map_width: wx.getSystemInfoSync().windowWidth*0.8,
+    map_height: wx.getSystemInfoSync().windowHeight * 0.7,
     latitudeInit: 0,
     longitudeInit: 0,
   },

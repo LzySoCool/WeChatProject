@@ -5,7 +5,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    addressList: [{
+      id: 1,
+      name: '李泽阳',
+      phone: '13870746135',
+      address: '中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼',
+      isCheaked: 1
+    }, {
+      id: 2,
+      name: '李泽阳',
+      phone: '13870746135',
+      address: '中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼',
+      isCheaked: 0
+      }, {
+        id: 2,
+        name: '李泽阳',
+        phone: '13870746135',
+        address: '中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼',
+        isCheaked: 0
+    }, {
+      id: 2,
+      name: '李泽阳',
+      phone: '13870746135',
+      address: '中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼',
+      isCheaked: 0
+      }, {
+        id: 2,
+        name: '李泽阳',
+        phone: '13870746135',
+        address: '中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼',
+        isCheaked: 0
+    }, {
+      id: 2,
+      name: '李泽阳',
+      phone: '13870746135',
+      address: '中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼中航国际大厦10楼',
+      isCheaked: 0
+    }]
   },
 
   /**
@@ -62,5 +98,49 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  changeAdd: function (e) {
+    var isChecked = parseInt(e.target.dataset.issct);
+    var id = parseInt(e.target.dataset.id);
+    var addressLists = this.data.addressList;
+    var addressList = addressLists[id];
+    addressList.isCheaked = isChecked;
+    this.setData({
+      addressList: addressLists
+    })
+    console.log(this.data.addressList)
+  },
+
+  /**
+   * 编辑地址
+   */
+  updateAddress: function () {
+    wx.navigateTo({
+      url: 'updateAddress',
+    })
+  },
+
+  /**
+   * 删除地址
+   */
+  deleteAddress: function () {
+    wx.showModal({
+      confirmText: '删除',
+      title: '删除地址',
+      content: '确认要删除该地址吗？',
+      success: function (e) {
+        console.log(e)
+      }
+    })
+  },
+
+  /**
+   * 增加地址
+   */
+  add_add: function () {
+    wx.navigateTo({
+      url: 'addAddress',
+    })
   }
-})
+  })

@@ -1,0 +1,81 @@
+/* pages/index/user/usualAddress/updateAddress.wxss */
+/* pages/index/user/usualAddress/addAddress.wxss */
+page {
+  background-color: #fff;
+  font-family:STXihei;
+  font-size: 35rpx;
+}
+
+.out {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameV {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30rpx;
+  border-bottom-style: solid;
+  border-width: 1rpx;
+  border-color: gray;
+  padding: 0 0 10rpx 20rpx;
+}
+
+ .nameImg {
+  height: 50rpx;
+  width: 50rpx;
+} 
+
+.addrV {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30rpx;
+  border-bottom-style: solid;
+  border-width: 1rpx;
+  border-color: gray;
+  padding: 0 0 10rpx 20rpx;
+}
+
+.inputM {
+  width: 100%;
+  height: 50rpx;
+  margin-left: 34rpx;
+}
+
+.changeAddr {
+  flex-direction: column;
+  width: 100%;
+  margin-left: 10%;
+}
+
+.textareaAddr {
+  height: 60px;
+}
+
+.addV {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 5%;
+  padding: 0 0 10rpx 20rpx;
+}
+
+.add_btn {
+  width: 100%;
+  position: fixed; 
+  bottom: 40%;
+  background-color: #fff;
+}
+
+.add_btn button {
+  width: 60%;
+  border-radius: 50rpx;
+  background-color: #f5263f;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+}

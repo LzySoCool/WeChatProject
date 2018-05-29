@@ -1,10 +1,10 @@
-// pages/index/publishTask/task.js
+// pages/index/user/usualAddress/addAddress.js
 
 //获取应用实例
 const app = getApp()
 
 // 引入SDK核心类
-var QQMapWX = require('../../../resource/qqmap-wx-jssdk.js');
+var QQMapWX = require('../../../../resource/qqmap-wx-jssdk.js');
 
 var demo = new QQMapWX({
   key: 'DHYBZ-2R5KX-ZPO44-TXE3Z-WPXW2-WNBOD' // 必填腾讯地图开发者秘钥
@@ -15,23 +15,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    image1: '../../../images/name.png',
-    image2: '../../../images/phone.png',
-    image3: '../../../images/money.png',
-    image4: '../../../images/address.png',
-    image5: '../../../images/describe.png',
-    image6: '../../../images/calenda.png',
-    image7: '../../../images/time.png',
-    image8: '../../../images/title.png',
+    image1: '/images/name.png',
+    image2: '/images/phone.png',
+    image3: '/images/money.png',
+    image4: '/images/address.png',
+    image5: '/images/describe.png',
+    image6: '/images/calenda.png',
+    image7: '/images/time.png',
+    image8: '/images/title.png',
     address: null,
-    dates: null,
-    time: null
+    isCheacked: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
+  onLoad: function (options) {
     var _this = this;
 
     wx.getLocation({
@@ -72,7 +71,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+  
   },
 
   /**
@@ -90,14 +89,14 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+  
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+  
   },
 
   /**
@@ -132,22 +131,22 @@ Page({
         this.setData({
           image1: image
         })
-      break;
+        break;
       case '2':
         this.setData({
           image2: image
         })
-      break;
+        break;
       case '3':
         this.setData({
           image3: image
         })
-      break;
+        break;
       case '4':
         this.setData({
           image4: image
         })
-      break;
+        break;
       case '5':
         this.setData({
           image5: image
@@ -224,39 +223,30 @@ Page({
   /**
    * 点击选择位置
    */
-  selectAddr: function(){
+  selectAddr: function () {
     wx.navigateTo({
-      url: '../map/address',
+      url: '/pages/index/map/address',
     })
-    
+
   },
 
-  //  点击日期组件确定事件  
-  bindDateChange: function (e) {
-    console.log(e.detail.value)
+  changeAdd: function (e) {
+    var isChecked = e.target.dataset.ischeack;
     this.setData({
-      dates: e.detail.value
+      isCheacked: !isChecked
     })
   },
 
-  //  点击城市组件确定事件  
-  bindTimeChange: function (e) {
-    console.log(e.detail.value)
-    this.setData({
-      time: e.detail.value
-    })
-  },
-
-  complate: function (){
+  complate: function () {
     wx.showToast({
-      title: '发布成功',
+      title: '添加成功',
       image: '../../../images/happy.png',
       duration: 2000,
       mask: "true",
-      success: function(){
+      success: function () {
         setTimeout(function () {
           wx.navigateTo({
-            url: 'taskList',
+            url: 'usualAddress',
           })
         }, 1000);
 

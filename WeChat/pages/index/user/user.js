@@ -43,6 +43,9 @@ Page({
         }
       })
     }
+    console.log(111111111)
+    console.log(this.data.userInfo)
+
   },
 
   /**
@@ -102,13 +105,29 @@ Page({
 
   nav_myTask: function () {
     wx.navigateTo({
-      url: 'myTask/sendTask',
+      url: 'myTask/receivedTask',
     })
   },
 
   nav_address: function () {
     wx.navigateTo({
       url: 'usualAddress/usualAddress',
+    })
+  },
+
+  nav_service: function () {
+    wx.showModal({
+      title: '联系客服',
+      content: '客服电话：13870746135\r\n客服Q Q：1012260580\r\n客服微信：lizeyang0012',
+      showCancel: false
+    })
+  },
+
+  bindViewTap: function (e) {
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
     })
   }
 })
